@@ -1,8 +1,8 @@
-/* Senseair K30 CO2 module - I2C Arduino library 
+/* Senseair K30 CO2 module - I2C Arduino library
  * CO2 level is expressed in ppm
  * return code 0 indicates succesful sensor reading
  * alfredc333
- * April, 2017 
+ * April, 2017
  * MIT License
  */
 
@@ -16,6 +16,7 @@ class K30_I2C
 {
   public:
     K30_I2C(int i2c_address);
+    void reset();
     int readCO2(int &CO2level);
   private:
     int _i2c_address;
